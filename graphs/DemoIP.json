@@ -1,0 +1,40 @@
+{
+  "properties": {
+    "name": "Demo IP."
+  },
+  "processes": {
+    "CreateList": {
+      "component": "CreateList"
+    },
+    "CreateTask": {
+      "component": "CreateTask"
+    }
+  },
+  "connections": [
+    {
+      "data": "My task",
+      "tgt": {
+        "process": "CreateTask",
+        "port": "name"
+      }
+    },
+    {
+      "data": "My list",
+      "tgt": {
+        "process": "CreateList",
+        "port": "name"
+      }
+    },
+    {
+      "src": {
+        "process": "CreateTask",
+        "port": "name"
+      },
+      "tgt": {
+        "process": "CreateList",
+        "port": "tasks",
+        "index": 0
+      }
+    }
+  ]
+}

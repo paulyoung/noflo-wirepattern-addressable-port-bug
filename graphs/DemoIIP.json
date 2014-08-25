@@ -1,0 +1,27 @@
+{
+  "properties": {
+    "name": "Demo IIP."
+  },
+  "processes": {
+    "CreateList": {
+      "component": "CreateList"
+    }
+  },
+  "connections": [
+    {
+      "data": "My list",
+      "tgt": {
+        "process": "CreateList",
+        "port": "name"
+      }
+    },
+    {
+      "data": "My task",
+      "tgt": {
+        "process": "CreateList",
+        "port": "tasks",
+        "index": 0
+      }
+    }
+  ]
+}

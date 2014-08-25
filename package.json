@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "ip": "node_modules/.bin/noflo graphs/DemoIP.json",
+    "iip": "node_modules/.bin/noflo graphs/DemoIIP.json"
+  },
+  "dependencies": {
+    "noflo": "0.5.9"
+  },
+  "private": true,
+  "noflo": {
+    "components": {
+      "CreateList": "components/CreateList.coffee",
+      "CreateTask": "components/CreateTask.coffee"
+    }
+  }
+}
